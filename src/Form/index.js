@@ -43,6 +43,35 @@ const Form = () => (
                 <Label>Your User ID</Label>
             </div>
             <div className="form__section">
+                <select className="form__countries">
+                    <option selected value="india">India</option>
+                    <option value="usa">USA</option>
+                    <option value="great-britain">Great Britain</option>
+                    <option value="germany">Germany</option>
+                </select>
+                <Label>Country</Label>
+            </div>
+            <div className="form__section form__section--city">
+                <div className="form__changing-city">
+                    <select className="form__countries form__places">
+                        <option selected value="maharashtra">Maharashtra</option>
+                        <option value="maharashtra">Maharashtra</option>
+                        <option value="maharashtra">Maharashtra</option>
+                        <option value="maharashtra">Maharashtra</option>
+                    </select>
+                    <Label>State</Label>
+                </div>
+                <div className="form__changing-city">
+                    <select className="form__countries form__places">
+                        <option selected value="pune">Pune</option>
+                        <option value="pune">Pune</option>
+                        <option value="pune">Pune</option>
+                        <option value="pune">Pune</option>
+                    </select>
+                    <Label>City</Label>
+                </div>
+            </div>
+            <div className="form__section">
                 <Input
                     type="tel"
                     required

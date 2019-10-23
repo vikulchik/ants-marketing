@@ -68,7 +68,8 @@
   color: #b0b0b0;
 }
 
-.input {
+.input,
+.form__countries {
   color: black;
   font-size: 17px;
   border: none;
@@ -148,4 +149,31 @@
 .form__buttons {
   display: flex;
   justify-content: space-between;
+}
+
+.form__countries {
+  background: none;
+  border-radius: 0;
+  height: 44px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("img/down-arrow-select.png") no-repeat center right;
+  background-size: 16px 14px;
+}
+
+.form__section--city {
+  flex-direction: row;
+  width: 362px;
+  justify-content: space-between;
+}
+
+.form__changing-city {
+  width: 160px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.form__places {
+  width: 160px;
 }
