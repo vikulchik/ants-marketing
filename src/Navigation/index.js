@@ -9,9 +9,15 @@ const Navigation = () => (
         >
             up
         </a>
+        <div className="animation-block">
+            <span className="animation-block__element">elem</span>
+            <span className="animation-block__element">elem</span>
+            <span className="animation-block__element active-element">elem</span>
+            <span className="animation-block__element">elem</span>
+        </div>
         <a
             href="#"
-            className="arrow arrow-up"
+            className="arrow arrow-down"
         >
             down
         </a>
