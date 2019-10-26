@@ -9,6 +9,7 @@ html, body, #root, .App {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .information-form {
@@ -249,6 +250,24 @@ html, body, #root, .App {
   background: url("img/img.png") no-repeat 0 0;
   height: 21px;
   width: 14px;
+}
+
+.popup-reset .main-title {
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup-reset {
+  background: #e8e8e8;;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
 }
 
 @media screen and  (max-width: 768px) {
