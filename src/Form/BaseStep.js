@@ -33,15 +33,13 @@ const defaultValues = {
     countries: countries[0].value,
     phone: '',
     referenceCode: '',
-}
+};
 
 class BaseStep extends React.Component {
     state = {
         modal: false,
-        activeStep: 1,
         ...defaultValues,
     };
-
 
     handleInput = (e) => {
         this.setState({
@@ -53,7 +51,7 @@ class BaseStep extends React.Component {
         this.setState({
             currentField: e.target.name,
         })
-    }
+    };
 
     handleReset = () => {
         this.setState({
@@ -74,16 +72,16 @@ class BaseStep extends React.Component {
         });
     };
 
-    resetAll = () => {
-        this.setState({
-            ...defaultValues
-        })
-    };
-
     handleSubmit = (e) => {
         e.preventDefault();
         console.log(this.state);
         this.props.onChangeStep(2);
+    };
+
+    resetAll = () => {
+        this.setState({
+            ...defaultValues
+        })
     };
 
     render() {

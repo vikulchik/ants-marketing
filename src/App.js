@@ -1,23 +1,29 @@
 import React from 'react';
-import Navigation from './Navigation/index';
+import Navigation from './Navigation';
 import Form from './Form/index';
 import './App.css';
 
 class App extends React.Component {
-    constructor(props) {
-        super(props);
+    state = {
+        activeStep: 1,
+    };
+
+    handleChangeStep = (activeStep) => {
+        this.setState({
+            activeStep
+        })
+    };
+
+    render()  {
+        return (
+            <div className="App">
+                <section className="information-form">
+                    <Navigation onChangeStep={this.handleChangeStep} activeStep={this.state.activeStep} />
+                    <Form onChangeStep={this.handleChangeStep} activeStep={this.state.activeStep} />
+                </section>
+            </div>
+        );
     }
-        render()
-        {
-            return (
-                <div className="App">
-                    <section className="information-form">
-                        <Navigation/>
-                        <Form/>
-                    </section>
-                </div>
-            );
-        }
 }
 
 export default App;

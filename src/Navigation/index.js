@@ -1,9 +1,10 @@
 import React from 'react';
 import './../App.css';
 
-const Navigation = () => (
+const Navigation = (props) => (
     <section className="navigation-form">
         <a
+            onClick={() => props.onChangeStep(1)}
             href="#"
             className="arrow arrow-up"
         >
@@ -16,6 +17,7 @@ const Navigation = () => (
             <span className="animation-block__element">elem</span>
         </div>
         <a
+            onClick={() => props.onChangeStep(2)}
             href="#"
             className="arrow arrow-down"
         >
