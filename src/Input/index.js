@@ -4,8 +4,11 @@ import './../App.css';
 
 const Input = props => (
     <input
+        onChange={props.onChange}
         type={props.type}
         className="input"
+        name={props.name}
+        value={props.value}
     />
 );
 

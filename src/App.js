@@ -1,7 +1,6 @@
 import React from 'react';
 import Navigation from './Navigation/index';
 import Form from './Form/index';
-import Popup from './Popup-reset/index';
 import './App.css';
 
 class App extends React.Component {
@@ -16,7 +15,6 @@ class App extends React.Component {
                         <Navigation/>
                         <Form/>
                     </section>
-                    <Popup />
                 </div>
             );
         }
