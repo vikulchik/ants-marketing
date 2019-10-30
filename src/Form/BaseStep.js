@@ -23,7 +23,45 @@ const countries = [
         title: 'Germany',
         value: 'germany'
     },
-]
+];
+
+const state = [
+    {
+        title: 'Maharashtra',
+        value: 'maharashtra'
+    },
+    {
+        title: 'Alabama',
+        value: 'alabama'
+    },
+    {
+        title: 'Alaska',
+        value: 'alaska',
+    },
+    {
+        title: 'Colorado',
+        value: 'colorado'
+    },
+];
+
+const city = [
+    {
+        title: 'Pune',
+        value: 'pune'
+    },
+    {
+        title: 'London',
+        value: 'london'
+    },
+    {
+        title: 'Glasgow',
+        value: 'glasgow',
+    },
+    {
+        title: 'Liverpool',
+        value: 'liverpool'
+    },
+];
 
 const defaultValues = {
     username: '',
@@ -31,6 +69,8 @@ const defaultValues = {
     email: '',
     userId: '',
     countries: countries[0].value,
+    state: state[0].value,
+    city: city[0].value,
     phone: '',
     referenceCode: '',
 };
@@ -145,20 +185,18 @@ class BaseStep extends React.Component {
                     </div>
                     <div className="form__section form__section--city">
                         <div className="form__changing-city">
-                            <select className="form__countries form__places">
-                                <option selected value="maharashtra">Maharashtra</option>
-                                <option value="maharashtra">Maharashtra</option>
-                                <option value="maharashtra">Maharashtra</option>
-                                <option value="maharashtra">Maharashtra</option>
+                            <select onChange={this.handleInput} name="state" className="form__countries form__places" value={this.state.state}>
+                                { state.map(country => (
+                                    <option key={country.value} value={country.value}>{country.title}</option>
+                                ))}
                             </select>
                             <Label>State</Label>
                         </div>
                         <div className="form__changing-city">
-                            <select className="form__countries form__places">
-                                <option selected value="pune">Pune</option>
-                                <option value="pune">Pune</option>
-                                <option value="pune">Pune</option>
-                                <option value="pune">Pune</option>
+                            <select onChange={this.handleInput} name="city" className="form__countries form__places" value={this.state.city}>
+                                { city.map(country => (
+                                    <option key={country.value} value={country.value}>{country.title}</option>
+                                ))}
                             </select>
                             <Label>City</Label>
                         </div>
@@ -178,7 +216,6 @@ class BaseStep extends React.Component {
                             onChange={this.handleInput}
                             name="referenceCode"
                             type="text"
-                            placeholder="Reference Code"
                             value={this.state.referenceCode}
                         />
                     </div>

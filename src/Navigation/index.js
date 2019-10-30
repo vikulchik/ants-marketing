@@ -1,5 +1,7 @@
 import React from 'react';
 import './../App.css';
+import PropTypes from "prop-types";
+import Button from "../Button";
 
 const Navigation = (props) => (
     <section className="navigation-form">
@@ -25,5 +27,9 @@ const Navigation = (props) => (
         </a>
     </section>
 );
+
+Navigation.propTypes = {
+    onClick: PropTypes.func,
+};
 
 export default Navigation;

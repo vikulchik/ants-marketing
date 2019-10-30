@@ -4,7 +4,7 @@ html, body, #root, .App {
   height: 100vh;
 }
 
-.App {
+.app {
   background: #e8e8e8;
   display: flex;
   justify-content: center;
@@ -61,10 +61,16 @@ html, body, #root, .App {
   transform: rotate(180deg);
 }
 
-.form {
+.form,
+.next-step {
   width: 85%;
   padding: 5%;
   box-sizing: border-box;
+}
+
+.next-step  {
+  min-height: 657px;
+  width: 1000px; /*временная ширина, пока нету контента*/
 }
 
 .main-title {

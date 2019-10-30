@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Title from '../Title/index';
 import Button from "../Button";
 import './../App.css';
+import Navigation from "../Navigation";
 
 const Popup = props => (
     <section className="popup-reset">
@@ -13,5 +14,9 @@ const Popup = props => (
         </div>
     </section>
 );
+
+Popup.propTypes = {
+    onClick: PropTypes.func,
+};
 
 export default Popup;

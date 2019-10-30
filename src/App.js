@@ -16,7 +16,7 @@ class App extends React.Component {
 
     render()  {
         return (
-            <div className="App">
+            <div className="app">
                 <section className="information-form">
                     <Navigation onChangeStep={this.handleChangeStep} activeStep={this.state.activeStep} />
                     <Form onChangeStep={this.handleChangeStep} activeStep={this.state.activeStep} />
