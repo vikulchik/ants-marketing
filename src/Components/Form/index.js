@@ -1,7 +1,7 @@
 import React from 'react';
 import BaseStep from './BaseStep';
 import Title from '../Title';
-import '../App.css';
+import '../../App.css';
 
 class Form extends React.Component {
     render() {

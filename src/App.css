@@ -53,7 +53,7 @@ html, body, #root, .app {
   height: 16px;
   position: absolute;
   background-size: cover;
-  background: url("img/front.png") no-repeat 0 0;
+  background: url("Components/img/front.png") no-repeat 0 0;
   top: 9px;
   left: 12px;
 }
@@ -147,6 +147,7 @@ select:focus  {
   flex-direction: column;
   flex-flow: column-reverse;
   margin-bottom: 30px;
+  position: relative;
 }
 
 .form__reset {
@@ -219,7 +220,7 @@ select:focus  {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: url("img/down-arrow-select.png") no-repeat center right;
+  background: url("Components/img/down-arrow-select.png") no-repeat center right;
   background-size: 16px 14px;
 }
 
@@ -258,7 +259,7 @@ select:focus  {
 }
 
 .active-element {
-  background: url("img/img.png") no-repeat 0 0;
+  background: url("Components/img/img.png") no-repeat 0 0;
   height: 21px;
   width: 14px;
 }
@@ -279,6 +280,37 @@ select:focus  {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 20px;
+}
+
+.error,
+.true {
+  display: block;
+  text-indent: -999999px;
+  position: absolute;
+  bottom: 9px;
+  right: 22px;
+}
+
+.true:after {
+   position: absolute;
+   content: '';
+   background: url('Components/img/true.png') no-repeat 0 0;
+   top: 0;
+   right: 0;
+   width: 30px;
+   height: 20px;
+   background-size: contain;
+ }
+
+.error:after {
+  position: absolute;
+  content: '';
+  background: url('Components/img/false.png') no-repeat 0 0;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 20px;
+  background-size: contain;
 }
 
 @media screen and  (max-width: 768px) {
@@ -307,3 +339,8 @@ select:focus  {
     width: 20%;
   }
 }
+
+.error-text {
+  color: red;
+}
+

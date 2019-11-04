@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './../App.css';
+import '../../App.css';
 
 const Input = props => (
     <input
         onChange={props.onChange}
+        onBlur={props.onBlur}
         type={props.type}
         className="input"
         name={props.name}

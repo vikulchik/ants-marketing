@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Title from '../Title/index';
+import Title from '../Title';
 import Button from "../Button";
-import './../App.css';
+import '../../App.css';
 import Navigation from "../Navigation";
 
 const Popup = props => (

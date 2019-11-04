@@ -1,6 +1,6 @@
 import React from 'react';
-import Navigation from './Navigation';
-import Form from './Form/index';
+import Navigation from './Components/Navigation';
+import Form from './Components/Form/index';
 import './App.css';
 
 class App extends React.Component {
